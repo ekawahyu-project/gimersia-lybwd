@@ -2,7 +2,7 @@ extends Camera2D
 ## Kamera inspeksi peta desa Gimersia.
 ## Memuat tampilan penuh peta saat dimulai dan mendukung pan (WASD/Panah/drag) serta zoom (scroll).
 
-@export var map_size: Vector2 = Vector2(1344.0, 784.0)
+@export var map_size: Vector2 = Vector2(1204.0, 672.0)
 @export var pan_speed: float = 420.0
 @export var zoom_step: float = 0.15
 @export var min_zoom: float = 0.5

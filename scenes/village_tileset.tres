@@ -8,29 +8,41 @@
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nh3b7"]
 texture = ExtResource("1_qgs32")
 margins = Vector2i(2, 2)
-texture_region_size = Vector2i(28, 28)
+texture_region_size = Vector2i(14, 14)
 0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0itsr"]
 texture = ExtResource("2_bantt")
 margins = Vector2i(2, 2)
-texture_region_size = Vector2i(28, 28)
+texture_region_size = Vector2i(14, 14)
 0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_k7clu"]
 texture = ExtResource("3_khvyr")
 margins = Vector2i(2, 2)
-texture_region_size = Vector2i(28, 28)
+texture_region_size = Vector2i(14, 14)
 0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8gyq0"]
 texture = ExtResource("4_u45j3")
 margins = Vector2i(2, 2)
-texture_region_size = Vector2i(28, 28)
+texture_region_size = Vector2i(14, 14)
 0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
 
 [resource]
-tile_size = Vector2i(28, 28)
+tile_size = Vector2i(14, 14)
 sources/0 = SubResource("TileSetAtlasSource_nh3b7")
 sources/1 = SubResource("TileSetAtlasSource_0itsr")
 sources/2 = SubResource("TileSetAtlasSource_k7clu")
