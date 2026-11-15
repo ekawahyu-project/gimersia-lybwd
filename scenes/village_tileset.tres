@@ -1,0 +1,37 @@
+[gd_resource type="TileSet" format=3]
+
+[ext_resource type="Texture2D" path="res://assets/sprites/map/New Piskel-11.png.png" id="1_qgs32"]
+[ext_resource type="Texture2D" path="res://assets/sprites/map/New Piskel-10.png.png" id="2_bantt"]
+[ext_resource type="Texture2D" path="res://assets/sprites/map/New Piskel-9.png.png" id="3_khvyr"]
+[ext_resource type="Texture2D" path="res://assets/sprites/map/New Piskel-8.png (1).png" id="4_u45j3"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nh3b7"]
+texture = ExtResource("1_qgs32")
+margins = Vector2i(2, 2)
+texture_region_size = Vector2i(28, 28)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0itsr"]
+texture = ExtResource("2_bantt")
+margins = Vector2i(2, 2)
+texture_region_size = Vector2i(28, 28)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_k7clu"]
+texture = ExtResource("3_khvyr")
+margins = Vector2i(2, 2)
+texture_region_size = Vector2i(28, 28)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8gyq0"]
+texture = ExtResource("4_u45j3")
+margins = Vector2i(2, 2)
+texture_region_size = Vector2i(28, 28)
+0:0/0 = 0
+
+[resource]
+tile_size = Vector2i(28, 28)
+sources/0 = SubResource("TileSetAtlasSource_nh3b7")
+sources/1 = SubResource("TileSetAtlasSource_0itsr")
+sources/2 = SubResource("TileSetAtlasSource_k7clu")
+sources/3 = SubResource("TileSetAtlasSource_8gyq0")
