@@ -1,0 +1,173 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://scripts/ui/character_hud.gd" id="1_p457c"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_urya7"]
+bg_color = Color(0.11, 0.14, 0.18, 0.86)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.88, 0.78, 0.55, 0.9)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c30gl"]
+bg_color = Color(0.19, 0.24, 0.29, 0.95)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.92, 0.82, 0.62, 0.9)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[node name="CharacterHUD" type="CanvasLayer" unique_id=377303767]
+layer = 10
+script = ExtResource("1_p457c")
+
+[node name="ControlsHint" type="PanelContainer" parent="." unique_id=955434322]
+offset_left = 14.0
+offset_top = 14.0
+offset_right = 14.0
+offset_bottom = 14.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_urya7")
+
+[node name="Margin" type="MarginContainer" parent="ControlsHint" unique_id=1214486329]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 6
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 6
+
+[node name="HintLabel" type="Label" parent="ControlsHint/Margin" unique_id=1031149243]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.96, 0.94, 0.86, 1)
+theme_override_font_sizes/font_size = 13
+text = "WASD: Gerak  |  Shift: Lari  |  E / Klik: Interaksi  |  V / Scroll: Kamera"
+
+[node name="ToastPanel" type="PanelContainer" parent="." unique_id=202154167]
+visible = false
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -210.0
+offset_top = 14.0
+offset_right = 210.0
+offset_bottom = 48.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_urya7")
+
+[node name="Margin" type="MarginContainer" parent="ToastPanel" unique_id=73675765]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 6
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 6
+
+[node name="ToastLabel" type="Label" parent="ToastPanel/Margin" unique_id=1758956183]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.95, 0.72, 1)
+theme_override_font_sizes/font_size = 14
+horizontal_alignment = 1
+
+[node name="DialogPanel" type="PanelContainer" parent="." unique_id=889520713]
+visible = false
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -330.0
+offset_top = -156.0
+offset_right = 330.0
+offset_bottom = -16.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_urya7")
+
+[node name="Margin" type="MarginContainer" parent="DialogPanel" unique_id=609229407]
+layout_mode = 2
+theme_override_constants/margin_left = 14
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 14
+theme_override_constants/margin_bottom = 12
+
+[node name="HBox" type="HBoxContainer" parent="DialogPanel/Margin" unique_id=927103264]
+layout_mode = 2
+theme_override_constants/separation = 14
+
+[node name="PortraitFrame" type="PanelContainer" parent="DialogPanel/Margin/HBox" unique_id=1261367507]
+custom_minimum_size = Vector2(96, 96)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_c30gl")
+
+[node name="PortraitRect" type="TextureRect" parent="DialogPanel/Margin/HBox/PortraitFrame" unique_id=1359535337]
+texture_filter = 1
+layout_mode = 2
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Content" type="VBoxContainer" parent="DialogPanel/Margin/HBox" unique_id=1808912390]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 6
+
+[node name="HeaderRow" type="HBoxContainer" parent="DialogPanel/Margin/HBox/Content" unique_id=1045611416]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="NameLabel" type="Label" parent="DialogPanel/Margin/HBox/Content/HeaderRow" unique_id=548896844]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.9, 0.58, 1)
+theme_override_font_sizes/font_size = 18
+text = "Rina"
+
+[node name="RoleLabel" type="Label" parent="DialogPanel/Margin/HBox/Content/HeaderRow" unique_id=1959761571]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.82, 0.86, 0.9, 1)
+theme_override_font_sizes/font_size = 14
+text = "— Warga Perumahan"
+
+[node name="TrustBox" type="HBoxContainer" parent="DialogPanel/Margin/HBox/Content/HeaderRow" unique_id=1588081068]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="TrustRect" type="TextureRect" parent="DialogPanel/Margin/HBox/Content/HeaderRow/TrustBox" unique_id=1860670460]
+texture_filter = 1
+custom_minimum_size = Vector2(76, 18)
+layout_mode = 2
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TrustLabel" type="Label" parent="DialogPanel/Margin/HBox/Content/HeaderRow/TrustBox" unique_id=744251435]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.82, 0.95, 0.78, 1)
+theme_override_font_sizes/font_size = 12
+text = "Dikenal Warga"
+
+[node name="BodyLabel" type="Label" parent="DialogPanel/Margin/HBox/Content" unique_id=524268210]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0.95, 0.96, 0.98, 1)
+theme_override_font_sizes/font_size = 15
+autowrap_mode = 3
+
+[node name="ButtonRow" type="HBoxContainer" parent="DialogPanel/Margin/HBox/Content" unique_id=421876943]
+layout_mode = 2
+theme_override_constants/separation = 8
+alignment = 2
+
+[node name="NextButton" type="Button" parent="DialogPanel/Margin/HBox/Content/ButtonRow" unique_id=999153438]
+layout_mode = 2
+text = "Lanjut [E]"
+
+[node name="CloseButton" type="Button" parent="DialogPanel/Margin/HBox/Content/ButtonRow" unique_id=1586852920]
+layout_mode = 2
+text = "Tutup [Esc]"

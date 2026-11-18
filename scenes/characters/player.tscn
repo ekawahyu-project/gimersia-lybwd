@@ -1,0 +1,47 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://scripts/characters/player.gd" id="1_yewv4"]
+[ext_resource type="SpriteFrames" path="res://scenes/characters/mc_frames.tres" id="2_76oj4"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_dyp2m"]
+radius = 5.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_atpat"]
+radius = 34.0
+
+[node name="Player" type="CharacterBody2D" unique_id=1590711569]
+motion_mode = 1
+script = ExtResource("1_yewv4")
+
+[node name="GroundShadow" type="Polygon2D" parent="." unique_id=524411489]
+show_behind_parent = true
+color = Color(0.05, 0.14, 0.03, 0.34)
+polygon = PackedVector2Array(8.5, -1, 7.361216, 0.7, 4.25, 1.9444864, 5.204577e-16, 2.4, -4.25, 1.9444864, -7.361216, 0.7, -8.5, -1, -7.361216, -2.7, -4.25, -3.9444864, -1.5613731e-15, -4.4, 4.25, -3.9444864, 7.361216, -2.7)
+
+[node name="Sprite" type="AnimatedSprite2D" parent="." unique_id=1477648064]
+texture_filter = 1
+scale = Vector2(0.78, 0.78)
+sprite_frames = ExtResource("2_76oj4")
+animation = &"idle_down"
+offset = Vector2(0, -32)
+
+[node name="Collider" type="CollisionShape2D" parent="." unique_id=1068894788]
+position = Vector2(0, -3)
+shape = SubResource("CircleShape2D_dyp2m")
+
+[node name="InteractDetector" type="Area2D" parent="." unique_id=1722652151]
+position = Vector2(0, -8)
+monitorable = false
+
+[node name="DetectorShape" type="CollisionShape2D" parent="InteractDetector" unique_id=1130427241]
+shape = SubResource("CircleShape2D_atpat")
+
+[node name="PlayerCamera" type="Camera2D" parent="." unique_id=1900950368]
+position = Vector2(0, -14)
+zoom = Vector2(1.85, 1.85)
+limit_left = 0
+limit_top = 0
+limit_right = 1204
+limit_bottom = 672
+position_smoothing_enabled = true
+position_smoothing_speed = 8.0

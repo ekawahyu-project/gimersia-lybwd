@@ -1,9 +1,9 @@
-[gd_resource type="TileSet" format=3]
+[gd_resource type="TileSet" format=3 uid="uid://jnntmqtnj08j"]
 
-[ext_resource type="Texture2D" path="res://assets/sprites/map/New Piskel-11.png.png" id="1_qgs32"]
-[ext_resource type="Texture2D" path="res://assets/sprites/map/New Piskel-10.png.png" id="2_bantt"]
-[ext_resource type="Texture2D" path="res://assets/sprites/map/New Piskel-9.png.png" id="3_khvyr"]
-[ext_resource type="Texture2D" path="res://assets/sprites/map/New Piskel-8.png (1).png" id="4_u45j3"]
+[ext_resource type="Texture2D" uid="uid://bxiscjy3wlht5" path="res://assets/sprites/map/New Piskel-11.png.png" id="1_qgs32"]
+[ext_resource type="Texture2D" uid="uid://sel5yetsp82l" path="res://assets/sprites/map/New Piskel-10.png.png" id="2_bantt"]
+[ext_resource type="Texture2D" uid="uid://dki8nplqt8b5y" path="res://assets/sprites/map/New Piskel-9.png.png" id="3_khvyr"]
+[ext_resource type="Texture2D" uid="uid://begpcahlf77w2" path="res://assets/sprites/map/New Piskel-8.png (1).png" id="4_u45j3"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nh3b7"]
 texture = ExtResource("1_qgs32")

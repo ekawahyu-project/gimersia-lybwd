@@ -1,0 +1,62 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://scripts/characters/village_npc.gd" id="1_xvwee"]
+[ext_resource type="SpriteFrames" path="res://scenes/characters/npc1_frames.tres" id="2_4y3hj"]
+[ext_resource type="Texture2D" path="res://assets/sprites/char/barKepercayaan/barKepercayaan3.png" id="3_brirt"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xkrgq"]
+radius = 5.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_eo1f1"]
+size = Vector2(26, 36)
+
+[node name="VillageNPC" type="CharacterBody2D" unique_id=957469785]
+motion_mode = 1
+script = ExtResource("1_xvwee")
+sprite_frames = ExtResource("2_4y3hj")
+
+[node name="GroundShadow" type="Polygon2D" parent="." unique_id=802555644]
+show_behind_parent = true
+color = Color(0.05, 0.14, 0.03, 0.34)
+polygon = PackedVector2Array(8.5, -1, 7.361216, 0.7, 4.25, 1.9444864, 5.204577e-16, 2.4, -4.25, 1.9444864, -7.361216, 0.7, -8.5, -1, -7.361216, -2.7, -4.25, -3.9444864, -1.5613731e-15, -4.4, 4.25, -3.9444864, 7.361216, -2.7)
+
+[node name="Sprite" type="AnimatedSprite2D" parent="." unique_id=2082990767]
+texture_filter = 1
+scale = Vector2(0.8, 0.8)
+sprite_frames = ExtResource("2_4y3hj")
+animation = &"idle_down"
+offset = Vector2(0, -32)
+
+[node name="Collider" type="CollisionShape2D" parent="." unique_id=916363664]
+position = Vector2(0, -3)
+shape = SubResource("CircleShape2D_xkrgq")
+
+[node name="ClickArea" type="Area2D" parent="." unique_id=2059756450]
+position = Vector2(0, -16)
+
+[node name="ClickShape" type="CollisionShape2D" parent="ClickArea" unique_id=1341123952]
+shape = SubResource("RectangleShape2D_eo1f1")
+
+[node name="StatusOverhead" type="Node2D" parent="." unique_id=1277559927]
+visible = false
+z_index = 20
+position = Vector2(0, -39)
+
+[node name="PromptLabel" type="Label" parent="StatusOverhead" unique_id=567479733]
+custom_minimum_size = Vector2(92, 16)
+offset_left = -46.0
+offset_top = -21.0
+offset_right = -46.0
+offset_bottom = -21.0
+theme_override_colors/font_color = Color(1, 0.96, 0.82, 1)
+theme_override_colors/font_outline_color = Color(0.14, 0.09, 0.04, 1)
+theme_override_constants/outline_size = 3
+theme_override_font_sizes/font_size = 9
+text = "[E]"
+horizontal_alignment = 1
+
+[node name="TrustBarSprite" type="Sprite2D" parent="StatusOverhead" unique_id=962713076]
+texture_filter = 1
+position = Vector2(0, -4)
+scale = Vector2(0.95, 0.95)
+texture = ExtResource("3_brirt")

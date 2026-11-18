@@ -1,0 +1,80 @@
+[gd_resource type="SpriteFrames" format=3]
+
+[ext_resource type="Texture2D" path="res://assets/sprites/char/sheets/npc1_sheet.png" id="1_gvvfh"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p8y81"]
+atlas = ExtResource("1_gvvfh")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w17tt"]
+atlas = ExtResource("1_gvvfh")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c82s6"]
+atlas = ExtResource("1_gvvfh")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4uord"]
+atlas = ExtResource("1_gvvfh")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cv2dw"]
+atlas = ExtResource("1_gvvfh")
+region = Rect2(256, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3h4oa"]
+atlas = ExtResource("1_gvvfh")
+region = Rect2(320, 0, 64, 64)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p8y81")
+}],
+"loop": 1,
+"name": &"idle_down",
+"speed": 2.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w17tt")
+}],
+"loop": 1,
+"name": &"idle_up",
+"speed": 2.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c82s6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p8y81")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4uord")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p8y81")
+}],
+"loop": 1,
+"name": &"walk_down",
+"speed": 6.5
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cv2dw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w17tt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3h4oa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w17tt")
+}],
+"loop": 1,
+"name": &"walk_up",
+"speed": 6.5
+}]
